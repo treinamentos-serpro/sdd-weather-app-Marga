@@ -1,10 +1,3 @@
-/**
- * Mapeia o `weather_code` (WMO) da Open-Meteo para um rótulo em pt-BR e um
- * ícone (emoji). Mantém o domínio de apresentação isolado e testável.
- *
- * Referência: https://open-meteo.com/en/docs (WMO Weather interpretation codes)
- */
-
 interface WeatherInfo {
   label: string;
   icon: string;
@@ -41,7 +34,10 @@ const WEATHER_CODE_MAP: Record<number, WeatherInfo> = {
   99: { label: 'Trovoadas com granizo forte', icon: '⛈️' },
 };
 
-const UNKNOWN: WeatherInfo = { label: 'Condição desconhecida', icon: '🌡️' };
+const UNKNOWN: WeatherInfo = {
+  label: 'Condição desconhecida',
+  icon: '🌡️',
+};
 
 export function getWeatherInfo(code: number): WeatherInfo {
   return WEATHER_CODE_MAP[code] ?? UNKNOWN;
@@ -53,4 +49,12 @@ export function getWeatherLabel(code: number): string {
 
 export function getWeatherIcon(code: number): string {
   return getWeatherInfo(code).icon;
+}
+
+/** Converte um ângulo para o setor cardeal de oito direções mais próximo. */
+export function getWindDirection(degrees: number): string {
+  const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
+  const normalized = ((degrees % 360) + 360) % 360;
+  const index = Math.floor((normalized + 22.5) / 45) % directions.length;
+  return directions[index];
 }

@@ -1,4 +1,15 @@
----
+Revise minha lista de requisitos e me diga, item a item, se cada um é funcional
+ou não-funcional. Aponte itens classificados incorretamente e sugira pelo menos
+4 requisitos não-funcionais que provavelmente estão faltando para um web app
+de clima (performance, acessibilidade, responsividade, disponibilidade).Revise minha lista de requisitos e me diga, item a item, se cada um é funcional
+ou não-funcional. Aponte itens classificados incorretamente e sugira pelo menos
+4 requisitos não-funcionais que provavelmente estão faltando para um web app
+de clima (performance, acessibilidade, responsividade, disponibilidade).Revise minha lista de requisitos e me diga, item a item, se cada um é funcional
+ou não-funcional. Aponte itens classificados incorretamente e sugira pelo menos
+4 requisitos não-funcionais que provavelmente estão faltando para um web app
+de clima (performance, acessibilidade, responsividade, disponibilidade).Aja como um Product Manager cético fazendo discovery. Liste todas as
+ambiguidades e lacunas deste briefing de Weather App. Para cada ponto, gere uma
+"pergunta em aberto" e descreva o IMPACTO de seguir sem resposta.---
 mode: agent
 description: 'Gera testes unitários (Vitest) e E2E (Playwright) a partir dos critérios de aceite.'
 ---
